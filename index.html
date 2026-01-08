@@ -11,64 +11,46 @@
   <meta name="keywords" content="PDF, دمج PDF, تقسيم PDF, ضغط PDF, تحويل PDF لورد, تلخيص PDF بالذكاء الاصطناعي, مدير ملفات PDF">
   <link rel="canonical" href="https://your-domain.com/" />
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="مدير ملفات PDF - أدوات متكاملة ومجانية">
-  <meta property="og:description" content="دمج، تقسيم، ضغط، وتلخيص ملفات PDF فوراً وبكل سهولة.">
-  <meta property="og:image" content="https://your-domain.com/og-image.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="مدير ملفات PDF">
-  <meta property="twitter:description" content="أدوات PDF ذكية ومجانية 100%.">
-
-  <!-- Structured Data for SEO (JSON-LD) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "مدير ملفات PDF",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "منصة أونلاين مجانية لإدارة وتعديل ملفات PDF مع دعم كامل للذكاء الاصطناعي في التلخيص والدردشة."
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // تهيئة Tailwind لمنع التنبيه في الكونسول ولتحسين الأداء
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#e11d48',
+          }
+        }
+      }
     }
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Cairo', 'Inter', sans-serif;
-    }
-    [dir="ltr"] body {
-      font-family: 'Inter', sans-serif;
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-behavior: smooth; }
+      body { @apply bg-gray-50 text-gray-900; font-family: 'Cairo', 'Inter', sans-serif; }
+      [dir="ltr"] body { font-family: 'Inter', sans-serif; }
     }
     .fade-in { animation: fadeIn 0.5s ease-in; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
-<script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+
+  <script type="importmap">
+  {
+    "imports": {
+      "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+      "react/": "https://esm.sh/react@^19.2.3/",
+      "react": "https://esm.sh/react@^19.2.3",
+      "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+      "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    }
   }
-}
-</script>
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900 transition-all duration-300">
+<body>
   <div id="root"></div>
-  <!-- هذا الوسم هو المحرك الرئيسي للتطبيق -->
   <script type="module" src="index.tsx"></script>
 </body>
 </html>
